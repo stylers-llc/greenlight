@@ -24,6 +24,9 @@ test:
 build:
   stage: build
   image: docker:stable
+  tags:
+    - docker-runner
+    - swarm
   services:
   - docker:dind
   script:
