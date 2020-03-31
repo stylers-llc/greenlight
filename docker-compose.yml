@@ -3,7 +3,7 @@ version: '3'
 services:
   app:
     entrypoint: [bin/start]
-    image: bigbluebutton/greenlight:v2
+    image: $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
     container_name: greenlight-v2
     env_file: .env
     restart: unless-stopped
@@ -32,4 +32,4 @@ services:
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
+      - POSTGRES_PASSWORD=80002532fd154b0b
