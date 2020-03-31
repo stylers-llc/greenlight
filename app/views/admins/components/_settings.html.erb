@@ -155,6 +155,12 @@
           </div>
           <div class="col-auto">
             <label class="colorinput">
+              <%= button_to admin_update_settings_path(setting: "Room Limit", value: 2), class: "colorinput-input", "data-disable": "" do %><% end %>
+              <span class="colorinput-color <%= room_limit_number == 2 ? "btn-primary" : "btn-outline-primary" %>">2</span>
+            </label>
+          </div>
+          <div class="col-auto">
+            <label class="colorinput">
               <%= button_to admin_update_settings_path(setting: "Room Limit", value: 5), class: "colorinput-input", "data-disable": "" do %><% end %>
               <span class="colorinput-color <%= room_limit_number == 5 ? "btn-primary" : "btn-outline-primary" %>">5</span>
             </label>
