@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  app:
+    entrypoint: [bin/start]
+    image: bigbluebutton/greenlight:v2
+    container_name: greenlight-v2
+    env_file: .env
+    restart: unless-stopped
+    extra_hosts:
+      - "dc.stylers.hq:89.135.190.25"
+    ports:
+      - 127.0.0.1:5000:80
+# When using external logging
+#    logging:
+#      driver: $LOG_DRIVER
+#      options:
+#        syslog-address: $LOG_ADDRESS
+#        tag: $LOG_TAG
+    volumes:
+      - ./log:/usr/src/app/log
+# When using sqlite3 as the database
+#      - ./db/production:/usr/src/app/db/production
+# When using postgresql as the database
+    links:
+      - db
+  db:
+    image: postgres:9.5
+    restart: on-failure
+    ports:
+      - 127.0.0.1:5432:5432
+    volumes:
+      - ./db/production:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=079ca4b3abd4d49e
+  smtpserver:
+    image: namshi/smtp
+    restart: always
+#    network_mode: host
+    volumes:
+      - ./dkim/config-meet.stylers.group:/etc/exim4/_docker_additional_macros:ro
+      - ./dkim/meet.stylers.group-private.pem:/etc/exim4/meet.stylers.group-private.pem:ro
+    environment:
+      - DISABLE_IPV6=true
+#      - RELAY_NETWORKS=:10.254.2.0/24
+      - MAILNAME=meet.stylers.group

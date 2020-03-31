@@ -1,0 +1,4 @@
+DKIM_CANON = relaxed
+DKIM_SELECTOR = 20200318
+DKIM_DOMAIN = meet.stylers.group
+DKIM_FILE = /etc/exim4/dkim/meet.stylers.group-private.pem
