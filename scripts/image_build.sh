@@ -82,16 +82,20 @@ if [ -z "$CD_DOCKER_USERNAME" ] || [ -z "$CD_DOCKER_PASSWORD" ]; then
 fi
 
 # Publish the image
-docker login -u="$CD_DOCKER_USERNAME" -p="$CD_DOCKER_PASSWORD"
+if [ -z $CD_DOCKER_REGISTRY ]; then
+  docker login -u="$CD_DOCKER_USERNAME" -p="$CD_DOCKER_PASSWORD"
+else
+  docker login -u="$CD_DOCKER_USERNAME" -p="$CD_DOCKER_PASSWORD" $CD_DOCKER_REGISTRY
+fi
 echo "#### Docker image $CD_DOCKER_REPO:$CD_REF_NAME is being published"
 docker push $CD_DOCKER_REPO
 
 # Publish image as latest and v2 if it is a release (excluding alpha and beta)
-if [[ "$CD_REF_NAME" == *"release"* ]] && [[ "$CD_REF_NAME" != *"alpha"* ]] && [[ "$CD_REF_NAME" != *"beta"* ]]; then
-  docker_image_id=$(docker images | grep -E "^$CD_DOCKER_REPO.*$CD_REF_NAME" | awk -e '{print $3}')
-  docker tag $docker_image_id $CD_DOCKER_REPO:latest
-  docker push $CD_DOCKER_REPO:latest
-  docker tag $docker_image_id $CD_DOCKER_REPO:v2
-  docker push $CD_DOCKER_REPO:v2
-fi
+#if [[ "$CD_REF_NAME" == *"release"* ]] && [[ "$CD_REF_NAME" != *"alpha"* ]] && [[ "$CD_REF_NAME" != *"beta"* ]]; then
+#  docker_image_id=$(docker images | grep -E "^$CD_DOCKER_REPO.*$CD_REF_NAME" | awk -e '{print $3}')
+#  docker tag $docker_image_id $CD_DOCKER_REPO:latest
+#  docker push $CD_DOCKER_REPO:latest
+#  docker tag $docker_image_id $CD_DOCKER_REPO:v2
+#  docker push $CD_DOCKER_REPO:v2
+#fi
 exit 0

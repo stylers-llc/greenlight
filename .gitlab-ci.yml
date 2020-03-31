@@ -5,35 +5,53 @@ stages:
 
 cache:
   paths:
-    - /cache
+    - vendor/ruby
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
 
 before_script:
 
 test:
   stage: test
+  tags:
+    - docker-runner
+    - swarm
   image: ruby:2.5
   script:
-  - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev nodejs
-  - bundle install --path /cache
-  - bundle exec rake db:create RAILS_ENV=test
-  - bundle exec rake test & bundle exec rspec & bundle exec rubocop
+    - apt-get update -qq && apt-get install -y -qq sqlite3 libsqlite3-dev nodejs
+    #  - bundle install --path cache
+    - bundle install -j $(nproc) --path vendor/ruby
+    - bundle exec rake db:create RAILS_ENV=test
+    - bundle exec rake test & bundle exec rspec & bundle exec rubocop
   except:
     variables:
       - $CD_TEST_IGNORE
 
 build:
   stage: build
-  image: docker:stable
+  image: docker:19.03.0
+  variables:
+    CD_DOCKER_USERNAME: gitlab-ci-token
+    CD_DOCKER_PASSWORD: $CI_JOB_TOKEN
+    CD_DOCKER_REPO: $CI_REGISTRY_IMAGE
+    CD_DOCKER_REGISTRY: $CI_REGISTRY
+    CD_BUILD_ALL: "true"
+  tags:
+    - docker-runner
+    - swarm
   services:
-  - docker:dind
+    - docker:19.03.0-dind
   script:
-  # Install bash, curl, git for deployment script
-  - apk update && apk add --no-cache bash curl git
-  # Install CA certs, openssl to https downloads, python for gcloud sdk
-  - apk add --update make ca-certificates openssl python
-  - update-ca-certificates
-  # Build.
-  - ./scripts/image_build.sh $CI_PROJECT_PATH $CI_COMMIT_REF_NAME $CI_COMMIT_SHA
+    # Install bash, curl, git for deployment script
+    - apk update && apk add --no-cache bash curl git
+    # Install CA certs, openssl to https downloads, python for gcloud sdk
+    - apk add --update make ca-certificates openssl python
+    - update-ca-certificates
+    # Build.
+    # - ./scripts/image_build.sh $CI_PROJECT_PATH $CI_COMMIT_REF_NAME $CI_COMMIT_SHA
+    - ./scripts/image_build.sh $CI_PROJECT_PATH $CI_PIPELINE_ID $CI_COMMIT_SHA
   only:
     refs:
       - branches
@@ -47,17 +65,51 @@ build:
 
 deploy:
   stage: deploy
-  image: docker:stable
-  services:
-  - docker:dind
+  tags:
+    - ssh-bbb
+  variables:
+    GIT_STRATEGY: none
+  only:
+    refs:
+      - branches
+      - tags
+  except:
+    variables:
+      - $CD_DEPLOY_IGNORE
   script:
-  # Install bash, curl, git for deployment script
-  - apk update && apk add --no-cache bash curl git
-  # Install CA certs, openssl to https downloads, python for gcloud sdk
-  - apk add --update make ca-certificates openssl python
-  - update-ca-certificates
+    - cd /srv/greenlight
+    - git fetch gitlab
+    - git checkout $CI_COMMIT_REF_NAME
+    - git pull gitlab $CI_COMMIT_REF_NAME
+    - docker-compose down
+    - docker rmi $(docker images -f dangling=true -q) || true
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker-compose up -d
+    - bbb-conf --restart
+
+
+
+.deploy:
+  stage: deploy
+  image: docker:stable
+  variables:
+    CD_DOCKER_USERNAME: gitlab-ci-token
+    CD_DOCKER_PASSWORD: $CI_JOB_TOKEN
+    CD_DOCKER_REPO: $CI_REGISTRY_IMAGE
+    CD_DOCKER_REGISTRY: $CI_REGISTRY
+  tags:
+    - docker-runner
+    - swarm
+  services:
+    - docker:dind
+  script:
+    # Install bash, curl, git for deployment script
+    - apk update && apk add --no-cache bash curl git
+    # Install CA certs, openssl to https downloads, python for gcloud sdk
+    - apk add --update make ca-certificates openssl python
+    - update-ca-certificates
   # Deploy.
-  - ./scripts/image_deploy.sh $CI_PROJECT_PATH $CI_COMMIT_REF_NAME $CI_COMMIT_SHA $CI_COMMIT_BEFORE_SHA
+  #- ./scripts/image_deploy.sh $CI_PROJECT_PATH $CI_COMMIT_REF_NAME $CI_COMMIT_SHA $CI_COMMIT_BEFORE_SHA
   only:
     refs:
       - branches
