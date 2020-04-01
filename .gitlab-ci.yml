@@ -78,8 +78,11 @@ build:
     - docker-compose down
     - docker rmi $(docker images -f dangling=true -q) || true
     - docker-compose up -d
+  environment:
+    name: ninja
+    url: https://meet.stylers.ninja
 
-deploy:dotgroup:
+deploy:prod:dotgroup:
   stage: deploy
   tags:
     - ssh-aruba-bbb1
@@ -98,38 +101,28 @@ deploy:dotgroup:
     - docker rmi $(docker images -f dangling=true -q) || true
     - docker-compose up -d
 #    - bbb-conf --restart
+  environment:
+    name: production
+    url: https://meet.stylers.group
 
-
-
-.deploy:
+deploy:staging:dotgroup:
   stage: deploy
-  image: docker:stable
-  variables:
-    CD_DOCKER_USERNAME: gitlab-ci-token
-    CD_DOCKER_PASSWORD: $CI_JOB_TOKEN
-    CD_DOCKER_REPO: $CI_REGISTRY_IMAGE
-    CD_DOCKER_REGISTRY: $CI_REGISTRY
   tags:
-    - docker-runner
-    - swarm
-  services:
-    - docker:dind
-  script:
-    # Install bash, curl, git for deployment script
-    - apk update && apk add --no-cache bash curl git
-    # Install CA certs, openssl to https downloads, python for gcloud sdk
-    - apk add --update make ca-certificates openssl python
-    - update-ca-certificates
-  # Deploy.
-  #- ./scripts/image_deploy.sh $CI_PROJECT_PATH $CI_COMMIT_REF_NAME $CI_COMMIT_SHA $CI_COMMIT_BEFORE_SHA
+    - ssh-bifrost
   only:
-    refs:
-      - branches
-      - tags
-    variables:
-      - $CD_DOCKER_USERNAME
-      - $CD_DOCKER_PASSWORD
-      - $CD_DEPLOY_SCRIPT
+    - develop-dotninja
+    - feature/dotgroup-staging-env
   except:
     variables:
       - $CD_DEPLOY_IGNORE
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u gitlab-ci-token $CI_REGISTRY --password-stdin
+  script:
+    - echo $STAGING_ENV > .env
+    - docker pull $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+    - docker stack deploy --with-registry-auth -c docker-stack.yml meet-staging
+  environment:
+    name: staging
+    url: https://meet-staging.stylers.ninja
+
+

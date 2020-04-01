@@ -1,0 +1,46 @@
+version: '3.6'
+
+services:
+  app:
+    entrypoint: [bin/start]
+    image: $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+    env_file: .env
+#    ports:
+#      - 127.0.0.1:5000:80
+    # When using external logging
+    #    logging:
+    #      driver: $LOG_DRIVER
+    #      options:
+    #        syslog-address: $LOG_ADDRESS
+    #        tag: $LOG_TAG
+    deploy:
+      labels:
+        - traefik.http.routers.meet-staging-web.rule=Host(`meet-staging.stylers.ninja`)
+        - traefik.http.routers.meet-staging-web.middlewares=redirect-to-https@file
+        - traefik.http.routers.meet-staging-web.entrypoints=web
+        - traefik.http.routers.meet-staging.rule=Host(`meet-staging.stylers.ninja`)
+        - traefik.http.services.meet-staging.loadbalancer.server.port=80
+        - traefik.http.routers.meet-staging.tls=true
+  db:
+    image: postgres:9.5
+#    ports:
+#      - 127.0.0.1:5432:5432
+    volumes:
+      - meet-staging:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=$DB_NAME
+      - POSTGRES_USER=$DB_USERNAME
+      - POSTGRES_PASSWORD=$DB_PASSWORD
+  smtpserver:
+    image: namshi/smtp
+#    volumes:
+#      - ./dkim/config-meet.stylers.group:/etc/exim4/_docker_additional_macros:ro
+#      - ./dkim/meet.stylers.group-private.pem:/etc/exim4/meet.stylers.group-private.pem:ro
+    environment:
+      - DISABLE_IPV6=true
+      #      - RELAY_NETWORKS=:10.254.2.0/24
+      - MAILNAME=meet-staging.stylers.ninja
+
+volumes:
+  meet-staging:
+    driver: gfs
