@@ -4,6 +4,9 @@ services:
   app:
     entrypoint: [bin/start]
     image: $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+    networks:
+      - meet-staging
+      - traefik-public
     env_file: .env
 #    ports:
 #      - 127.0.0.1:5000:80
@@ -25,6 +28,8 @@ services:
     image: postgres:9.5
 #    ports:
 #      - 127.0.0.1:5432:5432
+    networks:
+      - meet-staging
     volumes:
       - meet-staging:/var/lib/postgresql/data
     environment:
@@ -33,6 +38,8 @@ services:
       - POSTGRES_PASSWORD=079ca4b3aberwed49e
   smtpserver:
     image: namshi/smtp
+    networks:
+      - meet-staging
 #    volumes:
 #      - ./dkim/config-meet.stylers.group:/etc/exim4/_docker_additional_macros:ro
 #      - ./dkim/meet.stylers.group-private.pem:/etc/exim4/meet.stylers.group-private.pem:ro
@@ -44,3 +51,9 @@ services:
 volumes:
   meet-staging:
     driver: gfs
+
+networks:
+  meet-staging:
+    driver: overlay
+  traefik-public:
+    external: true
