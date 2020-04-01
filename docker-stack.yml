@@ -28,9 +28,9 @@ services:
     volumes:
       - meet-staging:/var/lib/postgresql/data
     environment:
-      - POSTGRES_DB=$DB_NAME
-      - POSTGRES_USER=$DB_USERNAME
-      - POSTGRES_PASSWORD=$DB_PASSWORD
+      - POSTGRES_DB=greenlight_staging
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=079ca4b3aberwed49e
   smtpserver:
     image: namshi/smtp
 #    volumes:
