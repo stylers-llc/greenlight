@@ -28,8 +28,11 @@ services:
     ports:
       - 127.0.0.1:5432:5432
     volumes:
-      - ./db/production:/var/lib/postgresql/data
+      - db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=80002532fd154b0b
+
+volumes:
+  db:
