@@ -73,7 +73,7 @@ build:
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker pull $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
-    - cp docker-compose.yml /srv/greenlight/docker-compose.yml
+    - cp docker-compose.ninja.yml /srv/greenlight/docker-compose.yml
     - cd /srv/greenlight
     - docker-compose down
     - docker rmi $(docker images -f dangling=true -q) || true

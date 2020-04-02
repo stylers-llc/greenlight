@@ -28,6 +28,20 @@
   height: 40%;
 }
 
+#home-header {
+  > .container {
+    background: image-url("header.png") no-repeat 0 50% transparent;
+  }
+}
+
+h1#main-text {
+  font-size: 2.8rem;
+}
+
+h2#main-sub-text {
+  font-size: 1.8rem;
+}
+
 .lead {
   font-size:18px;
 }
