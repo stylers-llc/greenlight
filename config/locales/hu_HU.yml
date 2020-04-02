@@ -222,11 +222,22 @@ hu_HU:
       help: "Amennyiben úgy gondolod, hogy ez egy hiba, kérjük, jelezd a rendszerüzemeltetőnek."
   expired_reset_token: A jelszómódosító-link már lejárt!
   features:
-    title: Tulajdonságok
-    rooms: Személyre szabott szobák
-    recordings: Felvételek kezelése
-    designs: Egyéni kinézet
-    authentication: Felhasználók hitelesítése
+    title: Funkciók
+    rooms:
+      title: Személyre szabható termek
+      description: A létrehozott szobákon belül újabb csoportokra oszthatod a hallgatóságod, és Te határozhatod meg, mekkora kontrollal szeretnél egy adott szobán belül rendelkezni. Ezáltal egy olyan online tér jön létre, amely valóban a tantermek hangulatát nyújtja.
+    toolbox:
+      title: Egyedi eszköztár
+      description: Számos hasznos eszközzel segítünk Neked abban, hogy minél interaktívabbá tudd tenni online beszélgetéseidet. llyen például a whiteboard funkció, a szobatulajdonos által indítható szavazás vagy az, hogy a résztvevők virtuális kézfeltétellel jelentkezni tudnak  - így tökéletesen leképezhető egy élő oktatás, ha erre van szükséged.
+    recordings:
+      title: Felvételek készítése
+      description: Egy szoba tulajdonosa felvételt készíthet a saját előadásáról, ha egy tudástár bővítéséhez vagy későbbi lejátszáshoz szüksége van arra.
+    authentication:
+      title: Felhasználókezelés
+      description: Kézben tarthatod, ki és hogyan vesz részt az általad tartott eseményen. Moderáttorá nevezhetsz ki felszólalókat, kontrollálhatod, ki kaphat szót, éslehetőséged van jelenléti ív letöltésére is, amely szintén hasznos funkció lehet online oktatások során.
+    easy_access:
+      title: Egyszerű elérhetőség
+      description: A létrehozott szobák egyszerűen érhetőek el böngészőből, külön installáció nélkül. Így a felhasználók számítógépről vagy  okos eszközről könnyedén csatlakozhatnak a tréninghez vagy konfereciához.
   footer:
     powered_by: "Powered by %{href}."
   forgot_password:
