@@ -19,6 +19,9 @@
 Rails.application.routes.draw do
   get '/health_check', to: 'health_check#all'
 
+  # ASZF
+  get '/aszf', to: 'main#aszf', as: :aszf
+
   # Error routes.
   match '/401', to: 'errors#unauthorized', via: :all, as: :unauthorized
   match '/404', to: 'errors#not_found', via: :all, as: :not_found
