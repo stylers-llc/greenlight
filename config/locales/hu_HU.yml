@@ -299,15 +299,15 @@ hu_HU:
         root_link: Bejelentkezés
         subtitle: "%{role} jogosultságok megvonva"
       invite:
-        info: "%{name} meghívott a személyes területedre."
-        signup_info: Az e-maileddel regisztrációhoz kattints az alábbi lehetőségre és hajtsd végre a lépéseket.
+        info: "Meghívást kaptál %{name} felhasználótól a Stylers Meet felületén saját fiók létrehozására."
+        signup_info: A regisztráció aktiválásához kattints az alábbi gombra, majd kövesd az utasításokat.
         signup_link: Regisztráció
         signup:
           info: "Egy meghívott felhasználó regisztrált, hogy használhassa a Greenlight-ot."
           admins_link: A Szervezeti oldal megtekintése
           subject: Új Greenlight felhasználó regisztrált
           username: "A felhasználó %{name} felhasználónévvel, %{email} e-mail címmel regisztrált."
-        subject: Meghívás a BigBlueButton használatára
+        subject: Meghívás csatlakozásra
         username: "A felhasználóneved %{email}."
       password_reset:
         title: 'Jelszó alaphelyzetbe állítása'
