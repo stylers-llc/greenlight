@@ -160,7 +160,7 @@ en:
         username: Username
       title: Manage Users
   add_to_google_calendar: "Add to Google Calendar"
-  bigbluebutton: BigBlueButton
+  bigbluebutton: Stylers Meet
   bigbluebutton_exception: Oops, there was an error when starting the meeting!
   cancel: Cancel
   cookies:
@@ -259,8 +259,8 @@ en:
     search:
       start: Start searching...
   landing:
-    about: "%{href} is a simple front-end for your BigBlueButton open-source web conferencing server. You can create your own rooms to host sessions, or join others using a short and convenient link."
-    welcome: Welcome.
+    about: 'Hatékony és felhasználóbarát felületet kínálunk hasznos eszköztárral, amely tökéletes megoldás oktatások, tréningek és megbeszélések lebonyolítására.'
+    welcome: 'Üdvözlünk a Stylers Meeten!'
     video: Watch our tutorial on using Greenlight
     upgrade: Show me how to upgrade to 2.0!
     version: We've released a new version of Greenlight, but your database isn't compatible.
