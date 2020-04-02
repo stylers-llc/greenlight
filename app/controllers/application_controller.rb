@@ -96,6 +96,7 @@ class ApplicationController < ActionController::Base
     else
       http_accept_language.language_region_compatible_from(I18n.available_locales)
     end
+    locale = "hu_HU"
 
     begin
       I18n.locale = locale.tr('-', '_') unless locale.nil?
@@ -104,6 +105,7 @@ class ApplicationController < ActionController::Base
       logger.error("Support: User locale is not supported (#{locale}")
       I18n.locale = "en"
     end
+    I18n.locale = "hu_HU"
   end
 
   # Checks to make sure that the admin has changed his password from the default
