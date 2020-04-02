@@ -91,20 +91,20 @@ class ApplicationController < ActionController::Base
 
   # Sets the appropriate locale.
   def user_locale(user = current_user)
-    locale = if user && user.language != 'default'
-      user.language
-    else
-      http_accept_language.language_region_compatible_from(I18n.available_locales)
-    end
+  #  locale = if user && user.language != 'default'
+  #    user.language
+  #  else
+  #    http_accept_language.language_region_compatible_from(I18n.available_locales)
+  #  end
     locale = "hu_HU"
 
-    begin
-      I18n.locale = locale.tr('-', '_') unless locale.nil?
-    rescue
-      # Default to English if there are any issues in language
-      logger.error("Support: User locale is not supported (#{locale}")
-      I18n.locale = "en"
-    end
+  #  begin
+  #    I18n.locale = locale.tr('-', '_') unless locale.nil?
+  #  rescue
+  #    # Default to English if there are any issues in language
+  #    logger.error("Support: User locale is not supported (#{locale}")
+  #    I18n.locale = "en"
+  #  end
     I18n.locale = "hu_HU"
   end
 
