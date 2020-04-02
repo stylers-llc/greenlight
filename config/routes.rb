@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   # ASZF
   get '/aszf', to: 'main#aszf', as: :aszf
+  get '/help', to: 'main#help', as: :help
 
   # Error routes.
   match '/401', to: 'errors#unauthorized', via: :all, as: :unauthorized
