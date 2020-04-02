@@ -118,7 +118,7 @@ deploy:staging:dotgroup:
   before_script:
     - echo $CI_REGISTRY_PASSWORD | docker login -u gitlab-ci-token $CI_REGISTRY --password-stdin
   script:
-    - echo $STAGING_ENV > .env
+    - echo "$STAGING_ENV" > .env
     - docker pull $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
     - docker stack deploy --with-registry-auth -c docker-stack.yml meet-staging
   environment:
