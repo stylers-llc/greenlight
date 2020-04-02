@@ -90,8 +90,7 @@ class ApplicationController < ActionController::Base
   end
 
   # Sets the appropriate locale.
-  def user_locale
-    locale = "hu_HU"
+  def user_locale()
     I18n.locale = "hu_HU"
   end
 
