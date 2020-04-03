@@ -27,6 +27,7 @@ class MainController < ApplicationController
   # GET /aszf
   def aszf
   end
+
   # GET /help
   def help
   end
