@@ -19,8 +19,6 @@
 Rails.application.routes.draw do
   get '/health_check', to: 'health_check#all'
 
-  # ASZF
-  get '/aszf', to: 'main#aszf', as: :aszf
   get '/help', to: 'main#help', as: :help
 
   # Error routes.
