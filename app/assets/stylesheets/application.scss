@@ -89,14 +89,18 @@ a {
 
   .stylers_logo {
     background: transparent image-url("stylers_logo.png") no-repeat 0 0;
+    width: 116px;
     height: 40px;
-    display: block;
+    display: inline-block;
+    background-size: contain;
   }
 
   .bh_logo {
     background: transparent image-url("bh_logo.png") no-repeat 0 0;
+    width: 103px;
     height: 40px;
-    display: block;
+    display: inline-block;
+    background-size: contain;
   }
 }
 
