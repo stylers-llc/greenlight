@@ -74,7 +74,7 @@
                 <%= f.check_box :accepted_privacy, class: "custom-switch-input form-control #{form_is_invalid?(@user, :accepted_privacy)}" %>
                 <span class="custom-switch-indicator cursor-pointer"></span>
               </label>
-              <%= f.label :accepted_privacy, t("privacy.accept", href: link_to(t("privacy.title"), "https://stylers.hu/adatvedelmi-szabalyzat-es-adatkezelesi-tajekoztato/", target: "_blank", class: "ml-1 text-blue")).html_safe, class: "ml-1" %>
+              <%= f.label :accepted_privacy, t("privacy_policy.accept", href: link_to(t("privacy_policy.title"), "https://stylers.hu/adatvedelmi-szabalyzat-es-adatkezelesi-tajekoztato/", target: "_blank", class: "ml-1 text-blue")).html_safe, class: "ml-1" %>
               <div class="invalid-feedback d-block"><%= @user.errors.full_messages_for(:accepted_privacy).first %></div>
             </div>
             <div class="card-footer px-0 pb-0">
