@@ -556,7 +556,7 @@ hu_HU:
     accept: "%{href}  oldalon lévőket elfogadom."
     accept_existing: A felhasználási feltételeket elfogadom
     title: Felhasználási feltételek
-  privacy_policy:
+  privacy:
     accept: "%{href}  oldalon lévőket elfogadom."
     accept_existing: Az adatvédelmi szabályzatot elfogadom
     title: Adatvédelmi szabályzat
