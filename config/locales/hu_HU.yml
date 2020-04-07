@@ -556,6 +556,8 @@ hu_HU:
     accept: "%{href}oldalon lévőek elfogadom."
     accept_existing: A felhasználási feltételeket elfogadom
     title: Felhasználási feltételek
+  privacy_policy:
+    title: Adatvédelmi szabályzat
   test_install: >
     Ez a fejlesztés egy előre konfigurált tesztszervert használ, amit helyettesíts a sajátoddal. Bővebb információkért %{href}. oldalt.
   update: Módosítás
