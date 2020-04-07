@@ -20,7 +20,8 @@ hu_HU:
   activerecord:
     attributes:
       user:
-        accepted_terms: "Felhasználási feltételek"
+        accepted_terms: "Felhasználási feltételeket"
+        accepted_privacy: "Adatvédelmi szabályzatot"
         email: E-mail
         name: Név
         password: Jelszó
