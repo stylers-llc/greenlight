@@ -111,6 +111,7 @@ ActiveRecord::Schema.define(version: 2020_01_30_144841) do
     t.string "image"
     t.string "password_digest"
     t.boolean "accepted_terms", default: false
+    t.boolean "accepted_privacy", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "email_verified", default: false
