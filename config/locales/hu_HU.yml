@@ -462,7 +462,7 @@ hu_HU:
       merge_success: "A Twitter fiókodat sikeresen egyesítettük az új fiókoddal. A régi, Twitter fiókod töröltük."
     invite:
       fail: "A tokened nem érvényes vagy lejárt. Amennyiben úgy gondolod, hogy ez egy hiba, kérjük, jelezd az üzemeltetőnek."
-      no_invite: "Meghívó igényléséhez kérjük keresd fel Laczkó Gábor kollégánkat: <a href=\"mailto:gabor.laczko@stylersonline.com\">gabor.laczko@stylersonline.com</a>."
+      no_invite: "A regisztrációhoz meghívás szükséges. Meghívó igényléséhez kérjük keresd fel Laczkó Gábor kollégánkat: <a href=\"mailto:gabor.laczko@stylersonline.com\">gabor.laczko@stylersonline.com</a>."
   remove: Eltávolítás
   rename: Átnevezés
   reset_password:
