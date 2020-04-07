@@ -553,10 +553,12 @@ hu_HU:
     title: Regisztrálás
     with: "%{provider} bejelentkezés"
   terms:
-    accept: "%{href}oldalon lévőek elfogadom."
+    accept: "%{href}oldalon lévőket elfogadom."
     accept_existing: A felhasználási feltételeket elfogadom
     title: Felhasználási feltételek
   privacy_policy:
+    accept: "%{href}oldalon lévőket elfogadom."
+    accept_existing: Az adatvédelmi szabályzatot elfogadom
     title: Adatvédelmi szabályzat
   test_install: >
     Ez a fejlesztés egy előre konfigurált tesztszervert használ, amit helyettesíts a sajátoddal. Bővebb információkért %{href}. oldalt.
