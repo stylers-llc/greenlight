@@ -553,11 +553,11 @@ hu_HU:
     title: Regisztrálás
     with: "%{provider} bejelentkezés"
   terms:
-    accept: "%{href}oldalon lévőket elfogadom."
+    accept: "%{href} oldalon lévőket elfogadom."
     accept_existing: A felhasználási feltételeket elfogadom
     title: Felhasználási feltételek
   privacy_policy:
-    accept: "%{href}oldalon lévőket elfogadom."
+    accept: "%{href} oldalon lévőket elfogadom."
     accept_existing: Az adatvédelmi szabályzatot elfogadom
     title: Adatvédelmi szabályzat
   test_install: >
