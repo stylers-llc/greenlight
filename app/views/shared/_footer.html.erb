@@ -14,6 +14,12 @@
 %>
 
 <footer class="footer pt-3">
+  <div class="float-right pr-4 pb-4">
+        <%= link_to(" ", "https://stylers.hu/", class: "stylers_logo") %>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <%= link_to(" ", "https://braininghub.hu/", class: "bh_logo") %>
+  </div>
+
   <div class="footer-copyright text-center mb-1">
   <%= t("footer.powered_by", href: link_to(t("greenlight"), "https://bigbluebutton.org/2018/07/09/greenlight-2-0/", target: "_blank", rel: "noopener")).html_safe %>
   &nbsp;&nbsp;&nbsp;&nbsp;
@@ -22,11 +28,6 @@
   <%= link_to(t("privacy_policy.title"), "https://stylers.hu/adatvedelmi-szabalyzat-es-adatkezelesi-tajekoztato/", target: "_blank", rel: "noopener") %>
   </div>
 
-<div class="float-right">
-      <%= link_to(" ", "https://stylers.hu/", class: "stylers_logo") %>
-      &nbsp;&nbsp;&nbsp;&nbsp;
-      <%= link_to(" ", "https://braininghub.hu/", class: "bh_logo") %>
-</div>
 
 </footer>
 
