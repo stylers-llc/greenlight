@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get '/health_check', to: 'health_check#all'
 
   get '/help', to: 'main#help', as: :help
+  get '/cookie', to: 'main#cookie', as: :cookie
 
   # Error routes.
   match '/401', to: 'errors#unauthorized', via: :all, as: :unauthorized

@@ -27,4 +27,8 @@ class MainController < ApplicationController
   # GET /help
   def help
   end
+
+  # GET /cookie
+  def cookie
+  end
 end
