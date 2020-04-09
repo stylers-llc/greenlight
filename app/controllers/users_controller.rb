@@ -116,7 +116,7 @@ class UsersController < ApplicationController
       if @user.update_attributes(user_params)
         @user.update_attributes(email_verified: false) if user_params[:email] != @user.email
 
-        user_locale(@user)
+        user_locale
 
         if update_roles(params[:user][:role_ids])
           return redirect_to redirect_path, flash: { success: I18n.t("info_update_success") }
