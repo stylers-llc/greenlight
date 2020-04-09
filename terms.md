@@ -10,17 +10,17 @@ Utolsó frissítés: 2020. április 06.
     
     A jelen Általános Szerződési Feltételek (ÁSZF) tartalmazzák a Stylers Kft. (továbbiakban Stylers)
     
-      * A cég rövidített elnevezése: Stylers Kft.
+      *  A cég rövidített elnevezése: Stylers Kft.
       
-      * A cég székhelye: 1134 Budapest, Klapka utca 11., 2. emelet
+      *  A cég székhelye: 1134 Budapest, Klapka utca 11., 2. emelet
       
-      * Cégjegyzékszám: 01-09-181167
+        * Cégjegyzékszám: 01-09-181167
       
-      - Adószám: 22910923-2-41
+        - Adószám: 22910923-2-41
       
-      - Képviselő: Lackó Gábor
+        -  Képviselő: Lackó Gábor
       
-      - Email:  stylers@stylers.hu
+        -  Email:  stylers@stylers.hu
     
     által üzemeltetett online szolgáltatásként bérelhető Stylers meet használatára vonatkozó feltételeket. A Stylers és a Felhasználó közötti szerződés a Felhasználó általi szabályos regisztrációval – kivéve a visszautasítás esetét – jön létre, ezt követően kezdi meg a Stylers a szolgáltatásnyújtást. A Felek közötti magyar nyelvű szerződés (ÁSZF) írásbeli szerződésnek minősül, amelyet a Stylers rögzít, illetve a Felhasználó számára hozzáférhetővé tesz.
     
