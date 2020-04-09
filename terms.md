@@ -32,7 +32,6 @@ Utolsó frissítés: 2020. április 06.
     A Stylers által működtetett online szolgáltatásként bérelhető Online Rendszer (Rendszer) szolgáltatásai elérhetőek mindazok számára, akik gazdasági tevékenységük körében érvényesen regisztrálnak a Stylers meet weboldalán, valamint jog- és cselekvőképes személyek vagy gazdálkodó szervezetek (a továbbiakban: Felhasználó).
     
     A regisztrációval a Felhasználó kijelenti, hogy
-    
     * A 18. életévét betöltött cselekvőképes személy, aki a szolgáltatást (Rendszert) gazdasági tevékenységének körében használja vagy
     * gazdálkodó szervezet képviselője,
     * és minden esetben a saját vagy az általa képviselt gazdálkodó szervezet nevében, valós adatai, illetve elérhetőségei megadásával regisztrál.
@@ -86,7 +85,6 @@ Utolsó frissítés: 2020. április 06.
 8. Tiltott tartalom
     
     Ön kötelezettséget vállal arra, hogy nem tesz közzé olyan tartalmat, amely:
-    
     * Pornográf vagy szexuális tartalmú
     * Prostitúciót hirdet
     * Illegális tevékenységre biztat
@@ -103,7 +101,6 @@ Utolsó frissítés: 2020. április 06.
 10. Garancia és felelősségvállalás
     
     Bár a Stylers törekszik a Stylers meet szolgáltatás lehető legmagasabb színvonalú, megszakítás nélkül történő biztosítására, Ön megérti és egyetért azzal, hogy a Stylers a Stylers meet szolgáltatást nyújtását garancia nélkül teszi. Ennek értelmében a Stylers nem képviseli vagy szavatolja, hogy
-    
     * a Stylers meet szerviz és az erőforrások az Ön igényeinek és elvárásainak megfelelnek,
     * a Stylers meet szolgáltatás és az erőforrások folyamatosan, időben, biztonságosan és hibáktól mentesen elérhető lesz,
     * a Stylers meet szolgáltatás és az erőforrások pontosak vagy megbízhatóak,
