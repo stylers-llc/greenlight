@@ -100,18 +100,18 @@ Utolsó frissítés: 2020. április 06.
     A feltételek mindaddig vonatkoznak Önre, amíg Ön vagy a Stylers a szerződést fel nem mondja. Ön bármikor jogosult a szerződés felmondására. bármikor A Stylers bármikor jogosult a szerződés felmondására, és bármikor jogosult a Stylers meet-hoz való hozzáférés megszüntetésére.
 
 10. Garancia és felelősségvállalás
-    
-    Bár a Stylers törekszik a Stylers meet szolgáltatás lehető legmagasabb színvonalú, megszakítás nélkül történő biztosítására, Ön megérti és egyetért azzal, hogy a Stylers a Stylers meet szolgáltatást nyújtását garancia nélkül teszi. Ennek értelmében a Stylers nem képviseli vagy szavatolja, hogy
-    * a Stylers meet szerviz és az erőforrások az Ön igényeinek és elvárásainak megfelelnek,
-    * a Stylers meet szolgáltatás és az erőforrások folyamatosan, időben, biztonságosan és hibáktól mentesen elérhető lesz,
-    * a Stylers meet szolgáltatás és az erőforrások pontosak vagy megbízhatóak,
-    * a Stylers meet működésének vagy funkcionalitásának minden hibája javításra vagy kijavításra kerül.
-    
-    A Stylers meet-et Ön a saját felelőségére használja. A Stylers meet használatával letöltött vagy egyéb módon megszerzett erőforrások szervizét saját belátása szerint és a saját felelősségére vállalja, és kizárólag Ön felelős a számítógép vagy más eszközök bármilyen károsodásáért, bármilyen adatvesztésért, amely az ilyen erőforrások letöltéséből származhat.
-    
-    Sem a Stylers, sem a források tulajdonosa nem garantálja, hogy a Stylers meet szolgáltatás nem tartalmaz kártevő programokat vagy más káros komponenseket. Ezen kívül a Stylers nem vállal semmiféle garanciát és nem vállal felelősséget harmadik fél alkalmazásaiért (vagy azok forrásáért), a felhasználói tartalomért vagy bármely más termékért vagy szolgáltatásért.
-    
-    Ön tudomásul veszi, hogy Stylers nem vállal felelősséget a Felhasználók közötti kommunikációért, továbbá a Stylers meet szolgáltatáson keresztül Ön és harmadik fél közötti tranzakcióért. Ön kijelenti, hogy semmiféle kifejezett, hallgatólagos, szóbeli vagy írásbeli információt vagy tanácsot nem kapott a Stylers-től ennek vonatkozásában.
+     
+     Bár a Stylers törekszik a Stylers meet szolgáltatás lehető legmagasabb színvonalú, megszakítás nélkül történő biztosítására, Ön megérti és egyetért azzal, hogy a Stylers a Stylers meet szolgáltatást nyújtását garancia nélkül teszi. Ennek értelmében a Stylers nem képviseli vagy szavatolja, hogy
+     * a Stylers meet szerviz és az erőforrások az Ön igényeinek és elvárásainak megfelelnek,
+     * a Stylers meet szolgáltatás és az erőforrások folyamatosan, időben, biztonságosan és hibáktól mentesen elérhető lesz,
+     * a Stylers meet szolgáltatás és az erőforrások pontosak vagy megbízhatóak,
+     * a Stylers meet működésének vagy funkcionalitásának minden hibája javításra vagy kijavításra kerül.
+     
+     A Stylers meet-et Ön a saját felelőségére használja. A Stylers meet használatával letöltött vagy egyéb módon megszerzett erőforrások szervizét saját belátása szerint és a saját felelősségére vállalja, és kizárólag Ön felelős a számítógép vagy más eszközök bármilyen károsodásáért, bármilyen adatvesztésért, amely az ilyen erőforrások letöltéséből származhat.
+     
+     Sem a Stylers, sem a források tulajdonosa nem garantálja, hogy a Stylers meet szolgáltatás nem tartalmaz kártevő programokat vagy más káros komponenseket. Ezen kívül a Stylers nem vállal semmiféle garanciát és nem vállal felelősséget harmadik fél alkalmazásaiért (vagy azok forrásáért), a felhasználói tartalomért vagy bármely más termékért vagy szolgáltatásért.
+     
+     Ön tudomásul veszi, hogy Stylers nem vállal felelősséget a Felhasználók közötti kommunikációért, továbbá a Stylers meet szolgáltatáson keresztül Ön és harmadik fél közötti tranzakcióért. Ön kijelenti, hogy semmiféle kifejezett, hallgatólagos, szóbeli vagy írásbeli információt vagy tanácsot nem kapott a Stylers-től ennek vonatkozásában.
 
 11. Feladat
     
