@@ -94,7 +94,6 @@ Utolsó frissítés: 2020. április 06.
     * A szerzői jog, szabadalom, védjegy, üzleti titok vagy szellemi tulajdon jogának megsértését valósítja meg
     * A hálózati azonosító fejlécek és információk félrevezető vagy megtévesztő szándékkal történő kiegészítése, eltávolítása vagy megváltoztatása miatt más személy vagy vállalat üzenetének tűnik, azaz elküldésével a feladó hamisítást, más személy színlelését vagy megszemélyesítését valósítja meg
     
-<br />
 9. Időtartam és megszűnés
     
     A feltételek mindaddig vonatkoznak Önre, amíg Ön vagy a Stylers a szerződést fel nem mondja. Ön bármikor jogosult a szerződés felmondására. bármikor A Stylers bármikor jogosult a szerződés felmondására, és bármikor jogosult a Stylers meet-hoz való hozzáférés megszüntetésére.
