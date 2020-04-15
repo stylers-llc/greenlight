@@ -226,22 +226,25 @@ hu_HU:
     title: Funkciók
     rooms:
       title: Személyre szabható termek
-      description: A létrehozott szobákon belül újabb csoportokra oszthatod a hallgatóságot, és Te határozhatod meg, mekkora kontrollal szeretnél egy adott szobán belül rendelkezni. Ezáltal egy olyan online tér jön létre, amely valóban a tantermek hangulatát nyújtja.
+      description: A létrehozott szobákon belül újabb csoportokra oszthatod a hallgatóságot, és Te határozhatod meg, mekkora kontrollal szeretnél egy adott szobán belül rendelkezni. Ezáltal egy olyan online tér jön létre, amely egy élő találkozó hangulalát nyújtja, legyen szó képzésről, megbeszélésről vagy éppen csapatépítő tréningről.
     whiteboard:
       title: Virtuális tábla
-      description: Ezzel az eszközzel egyrészt megvalósíthatsz mindent, amit egy valódi táblával tudnál -  megbeszélés vagy oktatás közben írhatsz és rajzolhatsz rá. Másrészt a képernyőd megosztása nélkül feltöltheted a helyére a prezentációd, így a résztvevők reakcióiról sem maradsz le.
+      description: Ezzel az eszközzel egyrészt megvalósíthatsz mindent, amit egy valódi táblával tudnál - megbeszélés vagy tréning közben írhatsz és rajzolhatsz rá. Másrészt a képernyőd megosztása nélkül feltöltheted a helyére a prezentációd, így a résztvevők reakcióiról sem maradsz le.
     toolbox:
       title: Egyedi eszköztár
-      description: Számos további hasznos eszközzel segítünk abban, hogy még interaktívabbá tudd tenni online beszélgetéseidet. llyen például a szavazás vagy az, hogy a résztvevők virtuális kézfeltétellel jelentkezni tudnak  - így tökéletesen leképezhető egy élő oktatás, ha erre van szükséged.
+      description: Számos további hasznos eszközzel segítünk abban, hogy még interaktívabbá tudd tenni online beszélgetéseidet. llyen például a szavazás vagy az, hogy a résztvevők virtuális kézfeltétellel jelentkezni tudnak - így tökéletesen leképezhető egy élő oktatás, megbeszélés, tréning.
     recordings:
       title: Felvételek készítése
       description: Egy szoba tulajdonosa felvételt készíthet a saját előadásáról, ha egy tudástár bővítéséhez vagy későbbi lejátszáshoz szüksége van arra.
     authentication:
       title: Felhasználókezelés
-      description: Kézben tarthatod, ki és hogyan vesz részt az általad tartott eseményen. Moderáttorá nevezhetsz ki felszólalókat, kontrollálhatod, ki kaphat szót, és lehetőséged van jelenléti ív letöltésére is, amely szintén hasznos funkció lehet online oktatások során.
+      description: Kézben tarthatod, ki és hogyan vesz részt az általad tartott eseményen. Moderáttorá nevezhetsz ki felszólalókat, kontrollálhatod, ki kaphat szót, és lehetőséged van jelenléti ív letöltésére is.
     easy_access:
       title: Egyszerű elérhetőség
-      description: A létrehozott szobák egyszerűen érhetőek el böngészőből, külön installáció nélkül. Így a felhasználók számítógépről vagy  okos eszközről könnyedén csatlakozhatnak a tréninghez vagy konferenciához.
+      description: A létrehozott szobák egyszerűen érhetőek el böngészőből, külön installáció nélkül. Így a felhasználók számítógépről vagy okos eszközről könnyedén csatlakozhatnak a tréninghez vagy konferenciához.
+    groups:
+      title: Beszélgetésen belüli csoportbontás
+      description: A meetingen belüli résztvevőket csoportokra lehet osztani. A host minden csoportba be tud csatlakozni, viszont az egyes csoportok nem hallják a többiben zajló beszélgetést. Ez remek lehetőség kiscsoportos feladatok vagy akár csapatépítők hatékony lebonyolítására is.
   footer:
     powered_by: "Powered by %{href}."
   forgot_password:
@@ -273,9 +276,9 @@ hu_HU:
     search:
       start: Keresés indítása...
   landing:
-    about: 'Hatékony és felhasználóbarát felületet kínálunk hasznos eszköztárral, amely tökéletes megoldás oktatások, tréningek és megbeszélések lebonyolítására.'
+    about: 'Hatékony és felhasználóbarát felületet kínálunk hasznos eszköztárral, amely tökéletes megoldás oktatások, tréningek és megbeszélések, csapatépítő programok lebonyolítására.'
     welcome: 'Üdvözlünk a Stylers Meeten!'
-    welcome_sub: 'Új generációs online kommunikációs és oktatási platform a Te igényeidre szabva.'
+    welcome_sub: 'Újgenerációs online kommunikációs platform a Te igényeidre szabva.'
     video: Nézd meg az ismertetőnket a  Greenlight használatáról
     upgrade: "Mutasd, hogyan tudok frissíteni a 2.0-ás verzióra!"
     version: "A Greenlight új verziója jelent meg, de az adatbázisod nem kompatibilis."
