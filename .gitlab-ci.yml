@@ -124,6 +124,6 @@ deploy:staging:dotgroup:
     - docker stack deploy --with-registry-auth -c docker-stack.yml meet-staging
   environment:
     name: staging
-    url: https://meet-staging.stylers.ninja
+    url: https://meet-staging.stylers.group
 
 
