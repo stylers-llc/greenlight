@@ -17,6 +17,11 @@ services:
     #        syslog-address: $LOG_ADDRESS
     #        tag: $LOG_TAG
     deploy:
+#      replicas: 2
+      update_config:
+#        parallelism: 2
+#        delay: 10s
+        order: start-first
       labels:
         - traefik.http.routers.meet-staging-web.rule=Host(`meet-staging.stylers.ninja`)
         - traefik.http.routers.meet-staging-web.middlewares=redirect-to-https@file
