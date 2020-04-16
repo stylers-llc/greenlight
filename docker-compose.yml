@@ -3,7 +3,7 @@ version: '3'
 services:
   app:
     entrypoint: [bin/start]
-    image: $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+    build: ./
     container_name: greenlight-v2
     env_file: .env
     restart: unless-stopped
@@ -17,6 +17,7 @@ services:
 #        tag: $LOG_TAG
     volumes:
       - ./log:/usr/src/app/log
+      - ./terms.md:/usr/src/app/config/terms.md
 # When using sqlite3 as the database
 #      - ./db/production:/usr/src/app/db/production
 # When using postgresql as the database
@@ -28,8 +29,11 @@ services:
     ports:
       - 127.0.0.1:5432:5432
     volumes:
-      - ./db/production:/var/lib/postgresql/data
+      - db:/var/lib/postgresql/data
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=80002532fd154b0b
+
+volumes:
+  db:

@@ -7,8 +7,6 @@ services:
     container_name: greenlight-v2
     env_file: .env
     restart: unless-stopped
-    extra_hosts:
-      - "dc.stylers.hq:89.135.190.25"
     ports:
       - 127.0.0.1:5000:80
 # When using external logging
@@ -35,15 +33,4 @@ services:
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=079ca4b3abd4d49e
-  smtpserver:
-    image: namshi/smtp
-    restart: always
-#    network_mode: host
-    volumes:
-      - ./dkim/config-meet.stylers.group:/etc/exim4/_docker_additional_macros:ro
-      - ./dkim/meet.stylers.group-private.pem:/etc/exim4/meet.stylers.group-private.pem:ro
-    environment:
-      - DISABLE_IPV6=true
-#      - RELAY_NETWORKS=:10.254.2.0/24
-      - MAILNAME=meet.stylers.group
+      - POSTGRES_PASSWORD=80002532fd154b0b

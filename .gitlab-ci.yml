@@ -73,7 +73,8 @@ build:
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker pull $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
-    - cp docker-compose.yml /srv/greenlight/docker-compose.yml
+    - cp docker-compose.ninja.yml /srv/greenlight/docker-compose.yml
+    - cp terms.md /srv/greenlight/terms.md
     - cd /srv/greenlight
     - docker-compose down
     - docker rmi $(docker images -f dangling=true -q) || true
@@ -96,6 +97,7 @@ deploy:prod:dotgroup:
     - docker pull $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
     - cp docker-compose.group.yml /root/greenlight/docker-compose.yml
     - cp -r dkim /root/greenlight/
+    - cp terms.md /root/greenlight/terms.md
     - cd /root/greenlight
     - docker-compose down
     - docker rmi $(docker images -f dangling=true -q) || true

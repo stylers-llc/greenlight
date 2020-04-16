@@ -47,6 +47,9 @@ class User < ApplicationRecord
   validates :accepted_terms, acceptance: true,
                              unless: -> { !greenlight_account? || !Rails.configuration.terms }
 
+  validates :accepted_privacy, acceptance: true,
+                             unless: -> { !greenlight_account? }
+
   # We don't want to require password validations on all accounts.
   has_secure_password(validations: false)
 
