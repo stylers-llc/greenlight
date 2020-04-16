@@ -112,7 +112,7 @@ deploy:staging:dotgroup:
   tags:
     - ssh-bifrost
   only:
-    - develop-dotninja
+    - develop-dotgroup
   except:
     variables:
       - $CD_DEPLOY_IGNORE
