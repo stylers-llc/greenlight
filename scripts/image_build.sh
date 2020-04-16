@@ -88,7 +88,7 @@ else
   docker login -u="$CD_DOCKER_USERNAME" -p="$CD_DOCKER_PASSWORD" $CD_DOCKER_REGISTRY
 fi
 echo "#### Docker image $CD_DOCKER_REPO:$CD_REF_NAME is being published"
-docker push $CD_DOCKER_REPO
+docker push $CD_DOCKER_REPO:$CD_REF_NAME
 
 # Publish image as latest and v2 if it is a release (excluding alpha and beta)
 #if [[ "$CD_REF_NAME" == *"release"* ]] && [[ "$CD_REF_NAME" != *"alpha"* ]] && [[ "$CD_REF_NAME" != *"beta"* ]]; then
