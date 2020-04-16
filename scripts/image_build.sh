@@ -98,4 +98,4 @@ docker push $CD_DOCKER_REPO:$CD_REF_NAME
 #  docker tag $docker_image_id $CD_DOCKER_REPO:v2
 #  docker push $CD_DOCKER_REPO:v2
 #fi
-exit 0
+#exit 0
