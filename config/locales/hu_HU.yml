@@ -222,6 +222,20 @@ hu_HU:
       message: Nincs hozzáférésed ehhez az alkalmazáshoz
       help: "Amennyiben úgy gondolod, hogy ez egy hiba, kérjük, jelezd a rendszerüzemeltetőnek."
   expired_reset_token: A jelszómódosító-link már lejárt!
+  suggested-for:
+    title: Mire ajánljuk?
+    agile:
+      title: Agilis módszerek használatára.
+      description: Project ownerek, scrum masterek, fejlesztők, designerek munkáját számos eszközzel tudjuk támogatni. Sprintek menedzselésére, retrospektívek lebonyolítására kiválóan alkalmas rendszert kínálunk.
+    trainings:
+      title: Csapatépítő tréningek megtartására.
+      description: Az interaktív funkciók segítségével akár egy online csapatépítő program megtartása is lehetséges! Kiscsoportos feladatmegoldások, játékok, kvízek is rugalmasan megvalósíthatók, a fizikai távolság könnyen áthidalható.
+    meetings:
+      title: Tárgyalások véghezvitelére.
+      description: A Stylers Meet eszköztára nagyban képes támogatni a stratégiai megbeszélések gördülékeny menetét, a döntések előkészítését és a döntéshozatalt. Úgy terjeszthetünk elő javaslatokat, hogy közben látjuk a beszélgetőpartnerek reakcióit.
+    courses:
+      title: Képzések lebonyolítására.
+      description: A virtuális tábla funkciónak köszönhetően a tantermi oktatás tökéletesen leképezhető, miközben az oktató mindvégig kapcsolatban tud maradni a hallgatókkal. A résztvevőket kis csoportokra lehet osztani a beszélgetésen belül, így csoportos feladatok elvégzésére is tökéletes.
   features:
     title: Funkciók
     rooms:
