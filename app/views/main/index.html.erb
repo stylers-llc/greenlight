@@ -32,7 +32,7 @@
 
   <h2 class="mb-6"><%= t("suggested-for.title") %></h2>
 
-    <div id="index-carousel" class="carousel slide" data-ride="carousel">
+    <div id="indexCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
             <h3><%= t("suggested-for.agile.title") %></h3>
@@ -51,6 +51,14 @@
             <p><%= t("suggested-for.courses.description") %></p>
         </div>
       </div>
+        <a class="carousel-control-prev" href="#indexCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
+        <a class="carousel-control-next" href="#indexCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only"></span>
+        </a>
     </div>
 
 </div>
