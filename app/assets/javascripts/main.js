@@ -16,6 +16,8 @@
 
 $(document).on('turbolinks:load', function(){
   $.rails.refreshCSRFTokens();
+
+  $('.carousel').carousel();
 })
 
 document.addEventListener("turbolinks:before-cache", function() {
