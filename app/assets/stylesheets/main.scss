@@ -183,9 +183,13 @@ h2#main-sub-text {
     margin-right: auto;
   }
 
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+  }
+
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    width: 10%;
     height: 100%;
     width: 100%;
     background-image: none;
