@@ -185,23 +185,18 @@ h2#main-sub-text {
 
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    height: 100px;
-    width: 100px;
-    background-size: 100%, 100%;
-    border-radius: 50%;
+    width: 10%;
+    height: 100%;
+    width: 100%;
     background-image: none;
-  }
-
-  .carousel-control-next-icon:after
-  {
-    content: '>';
-    font-size: 55px;
     color: $primary;
-  }
+    vertical-align: middle;
+    text-align: center;
 
-  .carousel-control-prev-icon:after {
-    content: '<';
-    font-size: 55px;
-    color: $primary;
+    i.fa {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
   }
 }
