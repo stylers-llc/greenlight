@@ -190,10 +190,9 @@ h2#main-sub-text {
 
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     background-image: none;
-    color: $primary;
     vertical-align: middle;
     text-align: center;
 
