@@ -177,7 +177,7 @@ hu_HU:
   docs: Dokumentáció
   email: E-mail cím
   email_sent: "%{email_type} címre e-mail küldtünk. (Kérjük, ellenőrizd a SPAM mappát is)"
-  enter_your_name: Add meg az e-mail címed!
+  enter_your_name: Add meg a neved!
   errors:
     bigbluebutton:
       help: "Kérjük, ellenőrizd, hogy a szükséges lépéseket megtetted. <a href=\"%{doc_link}\"> Bővebb információk</a>"
