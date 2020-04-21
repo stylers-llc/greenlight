@@ -232,7 +232,7 @@ hu_HU:
       description: Az interaktív funkciók segítségével akár egy online csapatépítő program megtartása is lehetséges! Kiscsoportos feladatmegoldások, játékok, kvízek is rugalmasan megvalósíthatók, a fizikai távolság könnyen áthidalható.
     meetings:
       title: Tárgyalások véghezvitelére.
-      description: A Stylers Meet eszköztára nagyban képes támogatni a stratégiai megbeszélések gördülékeny menetét, a döntések előkészítését és a döntéshozatalt. Úgy terjeszthetünk elő javaslatokat, hogy közben látjuk a beszélgetőpartnerek reakcióit.
+      description: A Stylers Meet eszköztára nagyban képes támogatni a stratégiai megbeszélések gördülékeny menetét, a döntések előkészítését és a döntéshozatalt.Úgy terjeszthetünk elő javaslatokat a feltöltött prezentációnk segítségével, hogy közben látjuk a beszélgetőpartnerek reakcióit.
     courses:
       title: Képzések lebonyolítására.
       description: A virtuális tábla funkciónak köszönhetően a tantermi oktatás tökéletesen leképezhető, miközben az oktató mindvégig kapcsolatban tud maradni a hallgatókkal. A résztvevőket kis csoportokra lehet osztani a beszélgetésen belül, így csoportos feladatok elvégzésére is tökéletes.
